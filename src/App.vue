@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    app
+    <button v-on:click="login">Login</button>
+    <button v-on:click="logout">Logout</button>
   </div>
 </template>
 
@@ -39,10 +40,25 @@ const auth = initCognito({
   },
 });
 
+function handleLoginClick(event) {
+  event.preventDefault();
+  console.log('login');
+  auth.getSession();
+}
+
+function handleLogoutClick(event) {
+  event.preventDefault();
+  console.log('logout');
+  auth.signOut();
+}
+
+
 export default {
   name: 'app',
-  components: {
-
+  components: {},
+  methods: {
+    login: handleLoginClick,
+    logout: handleLogoutClick,
   },
 };
 </script>
