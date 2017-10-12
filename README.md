@@ -1,6 +1,8 @@
 # serverless-aws-cognito-login
 
-> Simple example projects with instructions how to create serverless login using AWS Cognito.
+> Simple example project with instructions how to create serverless login using AWS Cognito.
+
+![Overview](https://github.com/juhamust/serverless-aws-cognito-login/raw/master/overview.png)
 
 These notes and snippets were created after spending too much time figuring out how to setup serverless authentication using AWS Cognito and Facebook login. Hope you find it useful!
 
@@ -15,10 +17,10 @@ These notes and snippets were created after spending too much time figuring out 
 
 ### Step: AWS Cognito
 
-1. Login to AWS and Cognito service
-2. Create user pool in Cognito
+1. Login to AWS and navigate to Cognito service
+2. Create user pool in Cognito, say: `servicex`
 3. Collect Pool Id (needed later)
-4. Define domain in Open App integration > Domain name, say: servicex
+4. Define domain in Open App integration > Domain name, say: `servicex`
 5. Navigate back to AWS Cognito
 6. Enable Facebook in Facebook in Federation > Identity providers
 7. Create client in App clients (no secret needed)
@@ -28,7 +30,7 @@ These notes and snippets were created after spending too much time figuring out 
 11. Define callback & sign out urls. Example: https://localhost:3000/
 12. Select Allowed OAuth Flows: Implicit grant
 13. Select Allowed Oauth Scopes: email, openid
-14. Create new identity pool in Cognito, say: servicex
+14. Create new identity pool in Cognito, say: `servicex`
 15. Open user pool and Edit identity pool
 16. Collect the identity pool id
 17. Create role for unauthenticated and authenticated (see policy examples)
@@ -36,4 +38,14 @@ These notes and snippets were created after spending too much time figuring out 
 
 ### Step: Frontend App
 
-19. Write app.js (see attached example) and host it in https://localhost:3000/
+1. Install Node.js
+2. Clone this repository
+3. Install dependencies: `npm install`
+4. Start app
+
+```
+git clone https://github.com/juhamust/serverless-aws-cognito-login.git
+cd serverless-aws-cognito-login
+npm install
+npm start
+```
