@@ -35,7 +35,8 @@ module.exports = {
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'no-console': 1,
-    'no-unused-vars': 1,
+    'no-console': 0,
+    'no-unused-vars': 0,
+    'spaced-comment': 0,
   }
 }

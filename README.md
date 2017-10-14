@@ -40,12 +40,15 @@ These notes and snippets were created after spending too much time figuring out 
 
 1. Install Node.js
 2. Clone this repository
-3. Install dependencies: `npm install`
+3. Install dependencies
+4. Edit `.env` and set values from above
 4. Start app
 
-```
+```sh
 git clone https://github.com/juhamust/serverless-aws-cognito-login.git
 cd serverless-aws-cognito-login
 npm install
+# NOTE: place values in .env!
+cat .env
 npm start
 ```

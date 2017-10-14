@@ -39,7 +39,7 @@ module.exports = {
   },
   dev: {
     env: merge(envConfig, require('./dev.env')),
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 3000,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
