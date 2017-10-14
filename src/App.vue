@@ -61,10 +61,7 @@ function handleLogoutClick() {
 
 export default {
   name: 'app',
-  components: {
-    Message,
-    PushButton,
-  },
+  components: {},
   created: initAuth,
   data: () => ({
     auth: null,
